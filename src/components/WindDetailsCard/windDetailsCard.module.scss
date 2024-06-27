@@ -4,7 +4,6 @@
 
   padding: 1.25rem;
 
-  background-color: var(--card-color2);
   box-shadow: 4px 4px 4px grey;
 
   border-radius: 0.625rem;
@@ -46,4 +45,17 @@
       }
     }
   }
+}
+
+.wind {
+  background-color: var(--card-color2);
+}
+
+.atmosphere {
+  background: var(--card-color-linear1);
+  color: var(--background-color1);
+}
+
+.astronomy {
+  background-color: var(--card-color-linear2);
 }

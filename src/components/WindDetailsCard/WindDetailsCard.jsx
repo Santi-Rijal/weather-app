@@ -4,7 +4,7 @@ import { WiStrongWind } from "react-icons/wi";
 
 const WindDetailsCard = () => {
   return (
-    <div className={style.detailsContainer}>
+    <div className={`${style.detailsContainer} ${style.wind}`}>
       <section className={style.detailsTitle}>
         <span className={style.title}>Wind</span>
         <WiStrongWind className={style.icon} />
