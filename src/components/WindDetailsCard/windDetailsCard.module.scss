@@ -1,0 +1,49 @@
+.detailsContainer {
+  width: 100%;
+  height: 100%;
+
+  padding: 1.25rem;
+
+  background-color: var(--card-color2);
+  box-shadow: 4px 4px 4px grey;
+
+  border-radius: 0.625rem;
+
+  .detailsTitle {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    .title {
+      width: fit-content;
+
+      font-size: 1.25rem;
+      font-weight: 300;
+    }
+  }
+
+  .details {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .detailsItem {
+      height: 100%;
+
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.625rem;
+      justify-content: center;
+      align-items: center;
+
+      .detailTitle {
+        font-size: 0.9375rem;
+        font-weight: 200;
+      }
+    }
+  }
+}
