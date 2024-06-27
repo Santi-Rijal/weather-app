@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 
 import style from "./page.module.scss";
 import Navbar from "@/components/Navbar/Navbar";
+import Content from "@/components/Content/Content";
 
 const threshold = 0.002;
 
@@ -74,6 +75,7 @@ const Home = () => {
   return (
     <div className={style.homePageContainer}>
       <Navbar />
+      <Content />
     </div>
   );
 };
