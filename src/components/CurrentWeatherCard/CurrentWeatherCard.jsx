@@ -3,6 +3,7 @@ import style from "./currentWeatherCard.module.scss";
 import weatherIcons from "@/Assets/weatherIcons";
 import WindDetailsCard from "../WindDetailsCard/WindDetailsCard";
 import AtmosphereDetailsCard from "../AtmosphereDetailsCard copy/AtmosphereDetailsCard";
+import AstronomyDetailsCard from "../AstronomyDetailsCard copy 2/AstronomyDetailsCard";
 
 const CurrentWeatherCard = () => {
   const demo = weatherIcons[0];
@@ -16,7 +17,7 @@ const CurrentWeatherCard = () => {
       <section className={style.moreDetailsContainer}>
         <WindDetailsCard />
         <AtmosphereDetailsCard />
-        <WindDetailsCard />
+        <AstronomyDetailsCard />
       </section>
     </section>
   );

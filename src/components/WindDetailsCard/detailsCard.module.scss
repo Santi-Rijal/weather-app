@@ -57,5 +57,9 @@
 }
 
 .astronomy {
-  background-color: var(--card-color-linear2);
+  background: var(--card-color-linear2);
+
+  .icon {
+    font-size: 3rem;
+  }
 }

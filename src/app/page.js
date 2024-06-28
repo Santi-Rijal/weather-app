@@ -19,7 +19,7 @@ const Home = () => {
   const getCurrentLocation = async (lat, long) => {
     const options = {
       method: "GET",
-      url: "https://yahoo-weather5.p.rapidapi.com/weather",
+      url: process.env.NEXT_PUBLIC_API_URL,
       params: {
         lat: lat,
         long: long,
@@ -27,7 +27,7 @@ const Home = () => {
         u: "c",
       },
       headers: {
-        "x-rapidapi-key": "5c8c14735bmsh3ddd43190f166dfp1d6a64jsn960d37cf18b5",
+        "x-rapidapi-key": process.env.NEXT_PUBLIC_API_KEY,
         "x-rapidapi-host": "yahoo-weather5.p.rapidapi.com",
       },
     };
@@ -35,6 +35,7 @@ const Home = () => {
     try {
       const response = await axios.request(options);
       setApiData(response);
+      console.log(response);
     } catch (error) {
       console.error(error);
     }
@@ -49,6 +50,8 @@ const Home = () => {
             const latitude = position?.coords?.latitude;
             const longitude = position?.coords?.longitude;
 
+            console.log(latitude, longitude);
+
             setLat(latitude);
             setLong(longitude);
             setPending(false);
@@ -62,10 +65,12 @@ const Home = () => {
           },
           (err) => {
             setError(err.message);
+            setPending(false);
           }
         );
       } else {
         setError("Geolocation is not supported by this browser.");
+        setPending(false);
       }
     };
 

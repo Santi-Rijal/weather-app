@@ -11,7 +11,7 @@ const weatherIcons = [
   { condition: "Rain", icon: <WiRain /> },
   { condition: "Snow", icon: <WiSnow /> },
   { condition: "Windy", icon: <WiWindy /> },
-  { condition: "Thunder Storm", icon: <WiThunderstorm /> },
+  { condition: "Thunderstorms", icon: <WiThunderstorm /> },
 ];
 
 export default weatherIcons;

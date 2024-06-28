@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./windDetailsCard.module.scss";
+import style from "./detailsCard.module.scss";
 import { WiStrongWind } from "react-icons/wi";
 
 const WindDetailsCard = () => {
