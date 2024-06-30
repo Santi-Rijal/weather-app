@@ -17,7 +17,7 @@ const Navbar = () => {
           id={0}
           className={`${style.currentLocationIcon} ${style.icons} ${
             selectedId === 0 && style.selected
-          }`}
+          } ${style.firstIcon}`}
           onClick={() => newItemClicked(0)}
         />
       </section>

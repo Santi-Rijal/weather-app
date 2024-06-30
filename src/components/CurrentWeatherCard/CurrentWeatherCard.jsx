@@ -1,18 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 import style from "./currentWeatherCard.module.scss";
 import weatherIcons from "@/Assets/weatherIcons";
 import WindDetailsCard from "../WindDetailsCard/WindDetailsCard";
 import AtmosphereDetailsCard from "../AtmosphereDetailsCard copy/AtmosphereDetailsCard";
 import AstronomyDetailsCard from "../AstronomyDetailsCard copy 2/AstronomyDetailsCard";
+import { APIContext } from "@/context/apiContext";
 
 const CurrentWeatherCard = () => {
-  const demo = weatherIcons[0];
+  const { currentCondition } = useContext(APIContext);
+
+  const getIcon = (text) => {
+    const iconObject = weatherIcons.find((icon) => icon.condition === text);
+    return iconObject ? iconObject.icon : null;
+  };
+
   return (
     <section className={style.currentWeatherContainer}>
       <section className={style.weatherDetails}>
-        <span className={style.conditionIcon}>{demo.icon}</span>
-        <span className={style.condition}>{demo.condition}</span>
-        <span className={style.temp}>23&deg;C</span>
+        <span className={style.conditionIcon}>
+          {getIcon(currentCondition?.text)}
+        </span>
+        <span className={style.condition}>{currentCondition?.text}</span>
+        <span className={style.temp}>
+          {`${currentCondition?.temperature}`}&deg;C
+        </span>
       </section>
       <section className={style.moreDetailsContainer}>
         <WindDetailsCard />
