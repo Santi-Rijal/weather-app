@@ -10,9 +10,17 @@
 
   background-color: var(--card-color1);
 
-  border-radius: 0.265rem;
+  border-radius: 0.625rem;
 
   box-shadow: 4px 4px 4px gray;
+
+  @media only screen and (max-width: 725px) {
+    min-width: 30%;
+  }
+
+  @media only screen and (max-width: 425px) {
+    min-width: 100%;
+  }
 
   .headerContainer {
     width: 100%;

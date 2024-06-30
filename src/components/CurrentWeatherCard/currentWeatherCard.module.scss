@@ -48,8 +48,12 @@
     width: inherit;
     height: 40%;
 
+    padding: 0.625rem;
+
     display: flex;
     flex-direction: row;
     column-gap: 1.25rem;
+
+    overflow-x: scroll;
   }
 }
